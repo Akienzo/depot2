@@ -4,7 +4,10 @@
 
   <tr class="total_line">
     <td colspan="2">合計</td>
-    <td class="total_cell"><%= cart.total_price %>円</td>
+    <!--<td class="total_cell"><%#= cart.total_price %>円</td>-->
+    <!--<td class="total_cell"><%#= number_to_currency(cart.total_price, :format => "%u%n", :unit => "円") %></td>-->
+    <!--<td class="total_cell"><%#= number_with_delimiter(cart.total_price) %>円</td>-->
+    <td class="total_cell"><%= print_yen(cart.total_price) %></td>
   </tr>
 
 </table>

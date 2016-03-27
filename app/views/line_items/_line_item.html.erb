@@ -3,8 +3,12 @@
 <% else %>
 <tr>
 <% end %>
-<tr>
     <td><%= line_item.quantity %>&times;</td>
     <td><%= line_item.product.title %></td>
-    <td class="line_item_price"><%= line_item.total_price %>円</td>
+    <!--<td class="line_item_price"><%#= line_item.total_price %>円</td>-->
+    <!--<td class="line_item_price"><%#= number_to_currency(line_item.total_price, :format => "%u%n", :unit => "￥") %></td>-->
+    <td class="line_item_price"><%= print_yen(line_item.total_price) %></td>
 </tr>
+
+<%#= number_to_currency(123456789, :format => "%u%n", :unit => "￥") %>
+

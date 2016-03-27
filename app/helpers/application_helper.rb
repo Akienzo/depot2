@@ -5,4 +5,9 @@ module ApplicationHelper
     end
     content_tag("div", attributes, &block)
   end
+  
+  def print_yen(price)
+    int = number_with_delimiter(price)
+    "#{int} 円"
+  end
 end

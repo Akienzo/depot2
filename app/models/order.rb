@@ -10,4 +10,6 @@ class Order < ActiveRecord::Base
       line_items << item
     end
   end
+  
+  self.per_page = 10
 end
